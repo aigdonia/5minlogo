@@ -14,5 +14,10 @@
             $rootScope.logo.color = color;
             $rootScope.logo.font.color = '#'+color.bg;
         }
+
+        vm.setFontColor = function (color) {
+            $rootScope.logo.font.color = color;
+        }
+
     }
 })();

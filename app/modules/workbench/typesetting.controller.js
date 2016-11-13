@@ -17,9 +17,5 @@
         vm.setFontWeight = function(weight){
             $rootScope.logo.font.weight = weight.style;
         }
-
-        vm.setFontColor = function (color) {
-            $rootScope.logo.font.color = color;
-        }
     }
 })();

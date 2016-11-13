@@ -1,4 +1,12 @@
 div
+    h2 Font Color
+    perfect-scrollbar.scroller(wheel-propagation="true" wheel-speed="1" min-scrollbar-length="10")
+        div.color-picker
+            div.color.white(ng-click="ctrl.setFontColor('white')")
+            div.color.black(ng-click="ctrl.setFontColor('black')")
+            div.color(ng-repeat="color in logo.color" ng-style="{'background-color': '#'+color }" ng-click="ctrl.setFontColor('#'+color)")
+
+div
     h2
         | Pick Color Theme
         small.attribution
