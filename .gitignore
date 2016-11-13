@@ -1,0 +1,5 @@
+.idea
+.tmp
+Resources
+bower_components
+node_modules

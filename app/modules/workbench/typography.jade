@@ -1,0 +1,10 @@
+div.logoName
+    input(placeholder='Logo Name', ng-model='logo.text')
+
+div
+    h2 Font
+    perfect-scrollbar.scroller(wheel-propagation="true" wheel-speed="1" min-scrollbar-length="10")
+        ul.select
+            li(ng-repeat="font in ctrl.fonts", ng-class="{'picked':(font === logo.font.type)}", ng-click="ctrl.setFontFamily(font)")
+                span(style="font-family:'{{font}}'") {{font}}
+

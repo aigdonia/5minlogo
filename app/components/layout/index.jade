@@ -1,0 +1,49 @@
+#logoapp
+    .navbar
+        header
+            .logo
+        footer
+            .attribution
+                p This project is inspired by this awesome article,
+                span
+                    | Colors
+                    a(target="_blank", href='http://www.vanschneider.com/colors/') ColorClaim
+                span
+                    | Logos
+                    a(target="_blank", href='https://thenounproject.com/') TheNounProject
+
+            .created
+                span by Ahmed Gaber with <3
+
+    section
+        #preview(ng-controller='PreviewController as ctrl')
+            div.createdLogoWrapper(ng-repeat='layout in ctrl.layouts')
+                .save-bar
+                    button(ng-click="ctrl.saveLogo(layout)")
+                        i.fa.fa-download.fa-lg
+                    a(id='download-anchor-{{layout}}', download="logo-{{layout}}.png")
+                .createdLogo(id="logo-{{layout}}", class='{{layout}} {{logo.font.style}} {{logo.font.weight}} {{logo.icon.shape}}')
+                    // filled logo
+                    .icon(ng-if='logo.icon.style === "filled"' style="color:#{{logo.color.primary}};")
+                        .shape(style="background-color:#{{logo.color.bg}}")
+                        .figure
+                            span(ng-if='!logo.icon.symbol') {{logo.text.charAt(0)}}
+                            img(ng-if='!!logo.icon.symbol' ng-src="{{logo.icon.symbol}}")
+
+                    //outlined logo
+                    .icon(ng-if='logo.icon.style !== "filled"' style="color:#{{logo.color.bg}};")
+                        .shape(style="border:3px solid #{{logo.color.bg}}")
+                        .figure
+                            span(ng-if='!logo.icon.symbol') {{logo.text.charAt(0)}}
+                            img(ng-if='!!logo.icon.symbol' ng-src="{{logo.icon.symbol}}")
+
+                    .text(ng-bind='logo.text', style="font-family:'{{logo.font.type}}';color:{{logo.font.color}}")
+                .bg-drop.transBG
+        section#workbench
+            ul.thepager
+                li: a(ui-sref='font' ui-sref-active='active') Pick Font
+                li: a(ui-sref='typography' ui-sref-active='active') Typography
+                li: a(ui-sref='icongraphy' ui-sref-active='active') Icon
+                li: a(ui-sref='color' ui-sref-active='active') Color
+                li: a(ui-sref='finish' ui-sref-active='active') Finish
+            section.toolbox( ui-view="" class="anim-in-out anim-fade" data-anim-speed="300")

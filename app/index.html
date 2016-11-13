@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Intouch</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- build:css(.) assets/styles/vendor.css -->
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/perfect-scrollbar/src/perfect-scrollbar.css" />
+	<link rel="stylesheet" href="bower_components/angular-ui-router-anim-in-out/css/anim-in-out.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css(.tmp) assets/styles/main.css -->
+	<link rel="stylesheet" href="assets/styles/main.css" />
+	<!-- endbuild -->
+</head>
+
+<body ng-app="5minlogo">
+	<div ui-view></div>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+	<script>
+		! function(A, n, g, u, l, a, r) {
+			A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+					(A[l].q = A[l].q || []).push(arguments)
+				}, A[l].l = +new Date, a = n.createElement(g),
+				r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+		}(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-XXXXX-X');
+		ga('send', 'pageview');
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+
+
+	<!-- build:js(.) assets/scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="bower_components/angular-touch/angular-touch.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+	<script src="bower_components/angular-perfect-scrollbar/src/angular-perfect-scrollbar.js"></script>
+	<script src="bower_components/angular-ui-router-anim-in-out/anim-in-out.js"></script>
+	<script src="bower_components/html2canvas/build/html2canvas.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+
+	<!-- build:js({.tmp,app}) assets/scripts/scripts.js -->
+	<script src="app.js"></script>
+	<script src="app.config.js"></script>
+	<!-- inject-scripts -->
+	<script src="components/bigLogo/logo.service.js"></script>
+	<script src="components/endpoints.js"></script>
+	<script src="components/layout/layout.js"></script>
+	<script src="modules/preview/preview.controller.js"></script>
+	<script src="modules/workbench/colors.controller.js"></script>
+	<script src="modules/workbench/icongraphy.controller.js"></script>
+	<script src="modules/workbench/typesetting.controller.js"></script>
+	<script src="modules/workbench/typography.controller.js"></script>
+	<script src="modules/workbench/workbench.routes.js"></script>
+	<!-- end inject-scripts -->
+	<!-- endbuild -->
+</body>
+
+</html>

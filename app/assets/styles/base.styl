@@ -1,0 +1,81 @@
+user-select(args) {
+    -webkit-user-select: args;
+    -khtml-user-select: args;
+    -moz-user-select: args;
+    -o-user-select: args;
+    user-select: args;
+}
+
+transition() {
+    -webkit-transition: arguments;
+    -moz-transition: arguments;
+    -o-transition: arguments;
+    transition: arguments;
+}
+
+body
+    font-family: 'Roboto'
+
+.main-view
+    height: 100%
+
+// Table striped
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #EDEDED;
+}
+
+// TableSort style
+table {
+    th, td {
+        vertical-align: top !important;
+    }
+
+    th.tablesort-sortable {
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .tablesort-sortable {
+        &:after {
+            content: "";
+            float: right;
+            margin-top: 7px;
+            visibility: hidden;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+
+            border-top:none;
+            border-bottom:4px solid #000;
+        }
+
+        transition:all 300ms;
+    }
+
+    .tablesort-desc {
+        &:after {
+            border-top: 4px solid #000;
+            border-bottom: none;
+        }
+    }
+
+    .tablesort-asc, .tablesort-desc {
+        background-color: rgba(141, 192, 219, 0.25);
+    }
+
+    .tablesort-sortable:hover:after, .tablesort-asc:after, .tablesort-desc:after {
+        visibility:visible;
+    }
+}
+
+.showIfLast {
+    display: none;
+}
+.showIfLast:last-child {
+    display: table-row;
+}
+.showIfLast td {
+    text-align: center;
+}
+.showIfLast td:after {
+    content: "No data";
+}

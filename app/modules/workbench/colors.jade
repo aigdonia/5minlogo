@@ -1,0 +1,10 @@
+div
+    h2
+        | Pick Color Theme
+        small.attribution
+            | from
+            a(href='http://www.vanschneider.com/colors/', target='_blank') ColorClaim
+    perfect-scrollbar.scroller.color-palette(wheel-propagation="true" wheel-speed="1" min-scrollbar-length="10")
+        ul.select
+            li.color-element(ng-repeat = 'color in ctrl.colors', style="background-color:#{{color.bg}}", ng-click="ctrl.applyColor(color)")
+                span(style="color:#{{color.primary}}") {{$index+1}}
