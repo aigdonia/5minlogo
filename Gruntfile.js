@@ -367,7 +367,7 @@
 			ngtemplates: {
 				dist: {
 					options: {
-						module: 'intouch-authorize',
+						module: '5minlogo',
 						htmlmin: '<%= htmlmin.dist.options %>',
 						usemin: 'scripts/scripts.js'
 					},
